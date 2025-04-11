@@ -9,14 +9,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Spectre.Console;
+
 //---------------------------------------------------------------------------------/
 namespace ST10439947_SecurityChatbot
 {
-    class Program
+    internal class Program
     {
 //---------------------------------------------------------------------------------/
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
+            var welcome = new Welcome();
+            welcome.WelcomeSequence();
         }
     }
 }
