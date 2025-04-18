@@ -6,11 +6,18 @@
  */
 //----------------------------------------------------------------------------------/
 /* Reference List:
- * Start Up Sound: https://www.youtube.com/watch?v=e6fDjYtbsCY
- * Spectre console for the figlet fonts, loading bars, & colours https://spectreconsole.net/
- * (Line [ENTER])
- *ASCII Font for "CyberMiku" - https://github.com/xero/figlet-fonts/blob/master/Basic.flf
- * (Line [ENTER])
+ * Start Up Sound:
+ * https://www.youtube.com/watch?v=e6fDjYtbsCY
+ * (Lines 61-67)
+ * Spectre console for the figlet fonts, loading bars, & colours:
+ * https://spectreconsole.net/
+ * (Lines 49, 50, 72-86, 92-110)
+ * ASCII Font for "Welcome to":
+ * https://github.com/xero/figlet-fonts/blob/master/Graceful.flf
+ * (Lines 49, 74)
+ * ASCII Font for "CyberMiku":
+ * https://github.com/xero/figlet-fonts/blob/master/Basic.flf
+ * (Line 50, 78)
  */
 //----------------------------------------------------------------------------------/
 using System;
@@ -27,6 +34,8 @@ using Spectre.Console;
 //---------------------------------------------------------------------------------/
 namespace ST10439947_SecurityChatbot
 {
+    //---------------------------------------------------------------------------------/
+    //this class holds the welcome sequence for the chatbot
     internal class Welcome
     {
         //---------------------------------------------------------------------------------/

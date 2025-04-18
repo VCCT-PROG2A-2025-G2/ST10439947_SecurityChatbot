@@ -5,6 +5,12 @@
  * Hello World Project
  */
 //-----------------------------------------------------------------------------------/
+/*Reference List:
+ * ASCII art that I customised and adjusted based on this example:
+ * http://anime.en.utf8art.com/arc/hatsune_miku_24.html
+ * (Lines 40-49; 52-61)
+ */
+//-----------------------------------------------------------------------------------/
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -15,6 +21,8 @@ using System.Threading.Tasks;
 //---------------------------------------------------------------------------------/
 namespace ST10439947_SecurityChatbot
 {
+    //---------------------------------------------------------------------------------/
+    //this class holds the ASCII art for the chatbot
     internal class ASCII
     {
         //---------------------------------------------------------------------------------/
@@ -30,6 +38,7 @@ namespace ST10439947_SecurityChatbot
         //loads the ASCII art from the text files
         public void LoadAscii()
         {
+            //-----------------------------------------------------------------------------/
             //Welcome ASCII art for the welcome screen
             Welcome = @"
                                                   /^^>)),---.＜^^}
@@ -42,6 +51,7 @@ namespace ST10439947_SecurityChatbot
                                             |:::::| (:::)/  <3  /
                                          -------------＼/______/---";
 
+            //-----------------------------------------------------------------------------/
             //Goodbye ASCII art for the exit screen
             Goodbye = @"
                                              /^^>)),---.＜^^} Bye Bye!
@@ -53,10 +63,8 @@ namespace ST10439947_SecurityChatbot
                                        |:::::| /.|~~~/------/
                                        |:::::| (:::)/  <3  /
                                     -------------＼/______/---";
-
+            //----------------------------------------------------------------------------/
         }
-
-
     }
 }
 //==================================================================================/
