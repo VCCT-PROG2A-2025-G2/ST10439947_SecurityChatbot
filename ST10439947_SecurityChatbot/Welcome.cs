@@ -36,27 +36,31 @@ namespace ST10439947_SecurityChatbot
         }
 
         //---------------------------------------------------------------------------------/
-
+        //creates instance variables for the 3 ascii art strings
         #region Instance Variables
-
+        //loads the figlet font for the titles
         public FigletFont graceFont = FigletFont.Load("fonts/Graceful.flf");
         public FigletFont basicFont = FigletFont.Load("fonts/Basic.flf");
 
+        //calls the random class to generate random numbers
         Random rand = new Random();
 
         #endregion
         //---------------------------------------------------------------------------------/
+        //this is the welcome sequence that is called when the program starts
+        //it will play the startup sound and display the welcome message
         public void WelcomeSequence()
         {
             //get file path play the startup sound
             var path = "Sounds\\start.wav"; ;
             SoundPlayer startUpNoise = new SoundPlayer(path);
+            //load the sound
+            startUpNoise.Load();
+            //play the sound
             startUpNoise.Play();
 
             //set the console window position
             Console.SetWindowPosition(0, 0);
-            //call the ASCII class to load the ASCII art
-            var ascii = new ASCII();
 
             //write the welcome message to the console using the figlet font
             AnsiConsole.Write(
@@ -68,33 +72,40 @@ namespace ST10439947_SecurityChatbot
                     .Centered()
                     .Color(Color.Turquoise2));
 
+            //call the ASCII class to load the ASCII art
+            var ascii = new ASCII();
+
             //load the ASCII art
             ascii.LoadAscii();
             Console.Write(ascii.Welcome);
 
+            //--------------------------------------------------/
             //this is the loading animation
             //it will show a spinner and a few messages which show up using a random delay
             AnsiConsole.Status()
                 .Spinner(Spinner.Known.Star2)
                 .Start("Loading...", ctx =>
                 {
-                    AnsiConsole.MarkupLine("[teal]\nCatching Bugs...[/]");
+                    AnsiConsole.MarkupLine("[cyan]\nCatching Bugs...[/]");
                     Thread.Sleep(1000 + rand.Next(2000));
 
-                    AnsiConsole.MarkupLine("[teal]Trolling Scammers...[/]");
+                    AnsiConsole.MarkupLine("[cyan]Trolling Scammers...[/]");
                     Thread.Sleep(1000 + rand.Next(2000));
 
-                    AnsiConsole.MarkupLine("[teal]Gone Phishing...[/]");
+                    AnsiConsole.MarkupLine("[cyan]Gone Phishing...[/]");
                     Thread.Sleep(1000 + rand.Next(2000));
 
-                    AnsiConsole.MarkupLine("[teal]Hacking the Matrix...[/]");
+                    AnsiConsole.MarkupLine("[cyan]Hacking the Matrix...[/]");
                     Thread.Sleep(1000 + rand.Next(2000));
 
-                    AnsiConsole.MarkupLine("[teal]Encrypting messages...[/]");
+                    AnsiConsole.MarkupLine("[cyan]Encrypting messages...[/]");
                     Thread.Sleep(1000 + rand.Next(2000));
                 });
+            //--------------------------------------------------/
             Console.Clear();
 
+            //create an instance of the ChatBot class
+            //this will call the SetLayout method which will display the title and subtitle
             var chat = new ChatBot();
             chat.SetLayout();
         }

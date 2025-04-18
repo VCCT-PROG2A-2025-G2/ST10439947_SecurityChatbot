@@ -24,11 +24,13 @@ namespace ST10439947_SecurityChatbot
         //creates instance variables for the 3 ascii art strings
         #region Instance Variables
         public String Welcome = "";
+        public String Goodbye = "";
         #endregion  
         //---------------------------------------------------------------------------------/
         //loads the ASCII art from the text files
         public void LoadAscii()
         {
+            //Welcome ASCII art for the welcome screen
             Welcome = @"
                                                   /^^>)),---.＜^^}
                                                  /:::/,==´::::;:::.
@@ -38,7 +40,19 @@ namespace ST10439947_SecurityChatbot
                                              /::::||\    3    /:/
                                             |:::::| /.|~~~/------/
                                             |:::::| (:::)/  <3  /
-                                          -------------＼/______/---";
+                                         -------------＼/______/---";
+
+            //Goodbye ASCII art for the exit screen
+            Goodbye = @"
+                                             /^^>)),---.＜^^} Bye Bye!
+                                            /:::/,==´::::;:::.
+                                           /:::/:::/ |:/ }:::\
+                                          /:::/|:/   //   |::}
+                                         /::::||/  > ' <  ;::/
+                                        /::::||\    3    /:/
+                                       |:::::| /.|~~~/------/
+                                       |:::::| (:::)/  <3  /
+                                    -------------＼/______/---";
 
         }
 
